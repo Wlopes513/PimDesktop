@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,5 +43,34 @@ namespace PimDesktop.Employee
         public string dateRegister { get; set; }
         public string salary { get; set; }
         public string information { get; set; }
+    }
+
+    public class EmployeeCreate
+    {
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Surname { get; set; }
+        [Required]
+        public string Address { get; set; }
+        [Required, RegularExpression(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$", ErrorMessage = "Por favor insira um valor válido para CPF, como: 111.111.111-00")]
+        public string Cpf { get; set; }
+        [Required]
+        [Range(1, 10000)]
+        public int Departament { get; set; }
+        [Required]
+        public string Responsability { get; set; }
+        [Required, RegularExpression(@"^-?\d+(\.\d+)?$", ErrorMessage = "Por favor insira um valor válido para Salário Base, como: 110.00")]
+        public string BaseSalary { get; set; }
+        [Required, RegularExpression(@"^-?\d+(\.\d+)?$", ErrorMessage = "Por favor insira um valor válido para Bônus, como: 110.00")]
+        public string BonusSalary { get; set; }
+        [Required, RegularExpression(@"^-?\d+(\.\d+)?$", ErrorMessage = "Por favor insira um valor válido para Benefícios, como: 110.00")]
+        public string BenefitsSalary { get; set; }
+        [Required, RegularExpression(@"^-?\d+(\.\d+)?$", ErrorMessage = "Por favor insira um valor válido para Taxas, como: 110.00")]
+        public string TaxesDiscount { get; set; }
+        [Required, RegularExpression(@"^-?\d+(\.\d+)?$", ErrorMessage = "Por favor insira um valor válido para Seguros, como: 110.00")]
+        public string SecureDiscount { get; set; }
+        [Required, RegularExpression(@"^-?\d+(\.\d+)?$", ErrorMessage = "Por favor insira um valor válido para Outros Descontos, como: 110.00")]
+        public string OtherDiscount { get; set; }
     }
 }

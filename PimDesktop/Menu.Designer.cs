@@ -175,6 +175,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Menu";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Menu_Load);
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
