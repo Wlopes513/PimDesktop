@@ -1,8 +1,3 @@
-<assembly
-  xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>
-  <assemblyIdentity
-      name='79.0.3945.0'
-      version='79.0.3945.0'
-      type='win32'/>
-  <file name='chrome_elf.dll'/>
-</assembly>
+version https://git-lfs.github.com/spec/v1
+oid sha256:37beee471865d2096c01c8679fd9af6763b6e9801f81f7f87352e1a810497f64
+size 222
